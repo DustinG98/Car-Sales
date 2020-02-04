@@ -11,6 +11,7 @@ import './styles.scss';
 
 import { carReducer } from './reducers'
 
+
 const store = createStore(carReducer)
 
 const rootElement = document.getElementById('root');
