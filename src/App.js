@@ -15,7 +15,7 @@ const App = props => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
-    dispatch(removeItem(item.id))
+    dispatch(removeItem(item))
   };
 
   const buyItem = item => {
