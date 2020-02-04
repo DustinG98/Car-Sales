@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { addItem, removeItem } from './actions/index'
 
@@ -11,7 +11,8 @@ import Total from './components/Total';
 
 
 const App = props => {
-  const { state, dispatch } = props;
+  const state = useSelector(state => state);
+  const dispatch = useDispatch();
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
@@ -37,8 +38,9 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => ({
-  state: state
-})
+// const mapStateToProps = state => ({
+//   state: state
+// })
 
-export default connect(mapStateToProps)(App);
+// export default connect(mapStateToProps)(App);
+export default App;
